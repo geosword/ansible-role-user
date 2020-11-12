@@ -2,7 +2,7 @@
 # $ ANSIBLE_SKIP_TAGS="geerlingguy.nginx,geerlingguy.php" molecule converge
 ---
 - name: Converge
-  hosts: arch
+  hosts: all
   tasks:
 #    - name: include scenario defaults
 #      include_vars:
@@ -15,4 +15,4 @@
       include_role:
         apply:
           become: true
-        name: ${CWD}"
+        name: "workingcopy"
